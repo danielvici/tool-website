@@ -34,9 +34,6 @@ export async function POST(req: NextRequest) {
         case 'gif':
           convertedBuffer = await sharpInstance.gif().toBuffer()
           break
-        case 'bmp':
-          convertedBuffer = await sharpInstance.bmp().toBuffer()
-          break
         default:
           throw new Error('Unsupported format')
       }
@@ -50,7 +47,7 @@ export async function POST(req: NextRequest) {
     } catch (error) {
       console.error('Conversion error:', error)
       return NextResponse.json(
-        { error: 'Error converting image' },
+        { error: 'Error converting image. Make sure the input format is supported.' },
         { status: 500 }
       )
     }

@@ -18,7 +18,7 @@ export default function ImageConverter() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp', '.bmp']
+      'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp']
     },
     multiple: false
   })
@@ -40,13 +40,10 @@ export default function ImageConverter() {
 
       if (!response.ok) {
         const errorData = await response.json()
-        throw new Error(errorData.error || 'Konvertierung fehlgeschlagen')
+        throw new Error(errorData.error || 'Conversion failed')
       }
 
-      // Blob aus der Antwort erstellen
       const blob = await response.blob()
-      
-      // Download-Link erstellen und klicken
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
@@ -56,7 +53,7 @@ export default function ImageConverter() {
       window.URL.revokeObjectURL(url)
       document.body.removeChild(a)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Ein Fehler ist aufgetreten')
+      setError(err instanceof Error ? err.message : 'An error occurred')
     } finally {
       setIsConverting(false)
     }
@@ -65,7 +62,7 @@ export default function ImageConverter() {
   return (
     <main className="min-h-screen p-8">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-white">Bild Converter</h1>
+        <h1 className="text-4xl font-bold mb-8 text-white">Image Converter</h1>
         
         <div className="bg-zinc-800 rounded-lg shadow-md p-6">
           <div className="space-y-6">
@@ -79,20 +76,20 @@ export default function ImageConverter() {
               <input {...getInputProps()} />
               <p className="text-gray-300">
                 {isDragActive
-                  ? 'Lass das Bild hier fallen...'
-                  : 'Ziehe ein Bild hierher oder klicke zum Auswählen'}
+                  ? 'Drop the image here...'
+                  : 'Drag & drop an image here, or click to select'}
               </p>
               {selectedFile && (
                 <p className="mt-2 text-blue-400">
-                  Ausgewählt: {selectedFile.name}
+                  Selected: {selectedFile.name}
                 </p>
               )}
             </div>
 
-            {/* Format Auswahl */}
+            {/* Format Selection */}
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
-                Zielformat
+                Target Format
               </label>
               <select
                 value={convertTo}
@@ -103,7 +100,6 @@ export default function ImageConverter() {
                 <option value="jpg">JPG</option>
                 <option value="webp">WebP</option>
                 <option value="gif">GIF</option>
-                <option value="bmp">BMP</option>
               </select>
             </div>
 
@@ -114,7 +110,7 @@ export default function ImageConverter() {
               </div>
             )}
 
-            {/* Konvertieren Button */}
+            {/* Convert Button */}
             <button
               onClick={handleConvert}
               disabled={!selectedFile || isConverting}
@@ -124,7 +120,7 @@ export default function ImageConverter() {
                   : 'bg-blue-500 hover:bg-blue-600'}
               `}
             >
-              {isConverting ? 'Konvertiere...' : 'Konvertieren'}
+              {isConverting ? 'Converting...' : 'Convert'}
             </button>
           </div>
         </div>
