@@ -34,7 +34,7 @@ export default function Home() {
     {
       name: 'More Coming Soon',
       file: '/coming_soon',
-      description: 'Erfahre mehr über zukünftige Features',
+      description: 'Learn more about future features',
       isComingSoon: true
     }
   ]
