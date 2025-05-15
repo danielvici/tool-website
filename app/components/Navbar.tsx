@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex-1" /> {/* Spacer */}
           <Link href="/" className="text-white font-bold text-xl hover:text-blue-100">
-            START
+            HOME
           </Link>
           <div className="flex-1 flex justify-end">
             <Link href="/about" className="text-white hover:text-blue-100">

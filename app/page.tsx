@@ -23,18 +23,18 @@ export default function Home() {
   const tools = [
     {
       name: 'Password Generator',
-      file: '/passwortgenerator',
+      file: '/password',
       description: 'Create secure passwords with custom options',
     },
     {
       name: 'Image Converter',
-      file: '/bildconverter',
+      file: '/img_converter',
       description: 'Convert images between different formats',
     },
     {
       name: 'More Coming Soon',
-      file: '/about',
-      description: 'Stay tuned for new tools!',
+      file: '/coming_soon',
+      description: 'Erfahre mehr über zukünftige Features',
       isComingSoon: true
     }
   ]
