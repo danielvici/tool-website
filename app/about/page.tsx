@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="min-h-screen p-8">
+    <main className="min-h-screen p-8 pt-24">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-white">About</h1>
         
@@ -13,13 +13,9 @@ export default function About() {
               The Source Code is available on GitHub (link below).
             </p>
             
-            <h2 className="text-2xl font-bold text-white mt-6 mb-4">Features</h2>
-            <ul className="list-disc pl-6 text-gray-300 space-y-2">
-              <li>Password Generator - Create secure passwords with customizable options</li>
-              <li>Image Converter - Convert images between different formats</li>
-              <li>Website Bookmarks - Save and organize your favorite websites</li>
-              <li>More tools coming soon!</li>
-            </ul>
+            <div className="bg-zinc-900 rounded-lg p-4 mb-6">
+              <p className="text-sm text-blue-400 font-mono">Current Version: 0.2.0</p>
+            </div>
 
             <h2 className="text-2xl font-bold text-white mt-6 mb-4">Privacy</h2>
             <p className="text-gray-300 mb-6">

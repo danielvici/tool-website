@@ -60,7 +60,7 @@ export default function ImageConverter() {
   }
 
   return (
-    <main className="min-h-screen p-8">
+    <main className="min-h-screen p-8 pt-24">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-white">Image Converter</h1>
         
@@ -100,6 +100,7 @@ export default function ImageConverter() {
                 <option value="jpg">JPG</option>
                 <option value="webp">WebP</option>
                 <option value="gif">GIF</option>
+                <option value="ico">ICO</option>
               </select>
             </div>
 

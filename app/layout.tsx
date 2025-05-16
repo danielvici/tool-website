@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Tool Website',
-  description: 'Eine Sammlung nützlicher Tools',
+  description: 'A collection of useful web-based tools. Secure and Open Source.',
 }
 
 export default function RootLayout({
@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de">
-      <body className={inter.className}>
+    <html lang="en">
+      <head>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/logo.ico" />
+      </head>
+      <body className="bg-zinc-900">
         <Navbar />
         {children}
       </body>

@@ -7,12 +7,26 @@ export default function AddWebsite() {
   const [title, setTitle] = useState('')
   const [isAdding, setIsAdding] = useState(false)
 
+  const formatUrl = (inputUrl: string) => {
+    // Remove leading/trailing whitespace
+    let formattedUrl = inputUrl.trim()
+    
+    // If URL doesn't start with a protocol, add https://
+    if (!formattedUrl.match(/^https?:\/\//i)) {
+      formattedUrl = 'https://' + formattedUrl
+    }
+    
+    return formattedUrl
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Validiere URL
+    const formattedUrl = formatUrl(url)
+    
+    // Validate URL
     try {
-      new URL(url)
+      new URL(formattedUrl)
     } catch {
       alert('Please enter a valid URL')
       return
@@ -20,23 +34,23 @@ export default function AddWebsite() {
 
     const newWebsite: PinnedWebsite = {
       id: Date.now().toString(),
-      title: title || url,
-      url: url.startsWith('http') ? url : `https://${url}`,
+      title: title || formattedUrl,
+      url: formattedUrl,
       addedAt: Date.now()
     }
 
-    // Lade bestehende Websites
+    // Load existing websites
     const existingWebsites = JSON.parse(localStorage.getItem('pinnedWebsites') || '[]')
     
-    // Füge neue Website hinzu
+    // Add new website
     localStorage.setItem('pinnedWebsites', JSON.stringify([...existingWebsites, newWebsite]))
 
-    // Setze Formular zurück
+    // Reset form
     setUrl('')
     setTitle('')
     setIsAdding(false)
 
-    // Lade die Seite neu um die neue Website anzuzeigen
+    // Reload page to show new website
     window.location.reload()
   }
 
@@ -59,10 +73,13 @@ export default function AddWebsite() {
               type="text"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              placeholder="https://example.com"
+              placeholder="example.com"
               className="w-full bg-zinc-700 text-white rounded-md border border-gray-600 p-2"
               required
             />
+            <p className="text-sm text-gray-400 mt-1">
+              HTTPS will be added automatically if not provided
+            </p>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">

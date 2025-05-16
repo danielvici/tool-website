@@ -34,6 +34,15 @@ export async function POST(req: NextRequest) {
         case 'gif':
           convertedBuffer = await sharpInstance.gif().toBuffer()
           break
+        case 'ico':
+          convertedBuffer = await sharpInstance
+            .resize(256, 256, {
+              fit: 'contain',
+              background: { r: 0, g: 0, b: 0, alpha: 0 }
+            })
+            .png()
+            .toBuffer()
+          break
         default:
           throw new Error('Unsupported format')
       }
