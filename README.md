@@ -21,7 +21,7 @@ A collection of useful web-based tools built with Next.js, TypeScript, and Tailw
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/tool-website.git
+git clone https://github.com/danielvici/tool-website.git
 ```
 
 2. Install dependencies:
