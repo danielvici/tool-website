@@ -1,0 +1,15 @@
+@if (enabled()) {
+  <div
+    class="h-full
+    hover:cursor-pointer flex flex-col p-6 rounded-lg border border-gray-700 bg-zinc-800 transition-colors duration-200 hover:border-blue-500"
+    [routerLink]="destination()">
+    <app-custom-title
+      [text]="title()"
+      [textSizeInPx]="titleSizeInPx()"
+      [textColor]="titleColor()"
+      fontWeight="bold"
+      class="mb-2"
+    ></app-custom-title>
+    <span [ngStyle]="{'color': descriptionColor()}">{{ description() }}</span>
+  </div>
+}

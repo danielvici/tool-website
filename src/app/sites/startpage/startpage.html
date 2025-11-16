@@ -1,7 +1,32 @@
 <div class="text-white">
-
-  <h1 class="text-center">Moin Welt</h1>
-  <p>TailwindCSS geht</p>
-
-
+  <div class="mb-6">
+    <app-custom-title
+      [textSizeInPx]="24"
+      text="Tools"
+      textColor="white"
+      class="font-bold"
+    ></app-custom-title>
+  </div>
+  <div class="gap-6 ml-4 max-w-7xl mx-auto space-y-12">
+    @for (feature of features; track $index) {
+      @if (feature.enabled) {
+        <div>
+          <div class="mb-4">
+            <app-custom-title
+              [textSizeInPx]="20"
+              [text]="feature.name"
+              textColor="oklch(70.7% 0.165 254.624)"
+              fontWeight="bold"
+            ></app-custom-title>
+          </div>
+          <div class="ml-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @for (tool of feature.tools; track $index) {
+              <app-custom-card [title]="tool.name"  [description]="tool.description" descriptionColor="oklch(70.4% 0.04 256.788)"
+                               [destination]="tool.link" [enabled]="tool.enabled"></app-custom-card>
+            }
+          </div>
+        </div>
+      }
+    }
+  </div>
 </div>

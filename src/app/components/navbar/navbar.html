@@ -1,11 +1,17 @@
 <nav class="h-16 bg-blue-marian">
-  <div class="flex justify-between items-center px-4 bg-blue-marian text-white container mx-auto h-full">
+  <div
+    class="flex justify-between items-center px-4 bg-blue-marian text-white container mx-auto h-full"
+  >
     <div class="flex items-center h-full">
-      <span class="font-bold text-xl">Home</span>
+      <a class="font-bold text-xl" routerLink="/">Home</a>
     </div>
     <div class="flex flex-row space-x-4 gap-6">
-      <a class="hover:text-blue-200" routerLink="/coming-soon" routerLinkActive="active-link">Coming Soon</a>
-      <a class="hover:text-blue-200" routerLink="/changelog" routerLinkActive="active-link">Changelog</a>
+      <a class="hover:text-blue-200" routerLink="/coming-soon" routerLinkActive="active-link"
+        >Coming Soon</a
+      >
+      <a class="hover:text-blue-200" routerLink="/changelog" routerLinkActive="active-link"
+        >Changelog</a
+      >
       <a class="hover:text-blue-200" routerLink="/about" routerLinkActive="active-link">About</a>
     </div>
   </div>

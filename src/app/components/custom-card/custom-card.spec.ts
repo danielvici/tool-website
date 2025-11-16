@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Startpage } from './startpage';
+import { CustomCard } from './custom-card';
 
-describe('Startpage', () => {
-  let component: Startpage;
-  let fixture: ComponentFixture<Startpage>;
+describe('CustomCard', () => {
+  let component: CustomCard;
+  let fixture: ComponentFixture<CustomCard>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Startpage],
+      imports: [CustomCard],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Startpage);
+    fixture = TestBed.createComponent(CustomCard);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

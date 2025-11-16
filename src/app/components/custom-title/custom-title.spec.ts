@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Startpage } from './startpage';
+import { CustomTitle } from './custom-title';
 
-describe('Startpage', () => {
-  let component: Startpage;
-  let fixture: ComponentFixture<Startpage>;
+describe('CustomTitle', () => {
+  let component: CustomTitle;
+  let fixture: ComponentFixture<CustomTitle>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Startpage],
+      imports: [CustomTitle],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Startpage);
+    fixture = TestBed.createComponent(CustomTitle);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
