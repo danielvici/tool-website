@@ -20,9 +20,4 @@ export class CustomCard {
 
   destination = input.required<string>();
   enabled = input.required<boolean>();
-
-
-  ngOnInit() {
-    console.log(this.destination());
-  }
 }
