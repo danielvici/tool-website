@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { SpeedInsights } from '@vercel/speed-insights/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Home() {
   const tools = [
