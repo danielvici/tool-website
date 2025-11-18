@@ -4,7 +4,7 @@
       [textSizeInPx]="24"
       text="Tools"
       textColor="white"
-      class="font-bold"
+      fontWeight="bold"
     ></app-custom-title>
   </div>
   <div class="gap-6 ml-4 max-w-7xl mx-auto space-y-12">
@@ -21,8 +21,7 @@
           </div>
           <div class="ml-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @for (tool of feature.tools; track $index) {
-              <app-custom-card [title]="tool.name"  [description]="tool.description" descriptionColor="oklch(70.4% 0.04 256.788)"
-                               [destination]="tool.link" [enabled]="tool.enabled"></app-custom-card>
+              <app-custom-card [title]="tool.name"  [description]="tool.description" descriptionColor="oklch(70.4% 0.04 256.788)" [destination]="tool.link" [enabled]="tool.enabled"></app-custom-card>
             }
           </div>
         </div>
