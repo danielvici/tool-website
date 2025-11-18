@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function Home() {
   const tools = [
@@ -81,6 +82,8 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <SpeedInsights />
     </main>
+
   )
 } 
