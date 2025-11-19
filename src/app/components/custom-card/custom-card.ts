@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CustomTitle } from '../custom-title/custom-title';
-import {RouterLink} from '@angular/router';
-import {NgStyle} from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-custom-card',
@@ -10,7 +10,6 @@ import {NgStyle} from '@angular/common';
   styleUrl: './custom-card.css',
 })
 export class CustomCard {
-
   title = input.required<string>();
   titleSizeInPx = input<number>(20);
   titleColor = input<string>();

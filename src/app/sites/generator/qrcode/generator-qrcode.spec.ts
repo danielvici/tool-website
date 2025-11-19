@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomDescription } from './custom-description';
+import { GeneratorQrcode } from './generator-qrcode';
 
-describe('CustomDescription', () => {
-  let component: CustomDescription;
-  let fixture: ComponentFixture<CustomDescription>;
+describe('GeneratorQrcode', () => {
+  let component: GeneratorQrcode;
+  let fixture: ComponentFixture<GeneratorQrcode>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomDescription],
+      imports: [GeneratorQrcode],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CustomDescription);
+    fixture = TestBed.createComponent(GeneratorQrcode);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,9 +8,8 @@ describe('Password', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GeneratorPassword]
-    })
-    .compileComponents();
+      imports: [GeneratorPassword],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GeneratorPassword);
     component = fixture.componentInstance;

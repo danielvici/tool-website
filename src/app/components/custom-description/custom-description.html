@@ -1,10 +1,10 @@
 <div>
   <div class="prose prose-invert max-w-none mb-6 text-gray-300 space-y-1">
-    <p>{{descriptionText()}}</p>
+    <p>{{ descriptionText() }}</p>
     @if (additionalListEnabled()) {
       <ul class="list-disc pl-6 text-gray-300 space-y-1">
         @for (item of additionalListText(); track $index) {
-          <li>{{item}}</li>
+          <li>{{ item }}</li>
         }
       </ul>
     }

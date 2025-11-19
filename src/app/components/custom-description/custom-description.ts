@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-description',
@@ -9,5 +9,5 @@ import {Component, input} from '@angular/core';
 export class CustomDescription {
   descriptionText = input.required<string>();
   additionalListEnabled = input<boolean>(false);
-  additionalListText =input<string[]>();
+  additionalListText = input<string[]>();
 }
