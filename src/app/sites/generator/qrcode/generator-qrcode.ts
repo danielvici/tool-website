@@ -58,4 +58,10 @@ export class GeneratorQrcode {
     link.click();
     document.body.removeChild(link);
   }
+
+  async ngOnInit() {
+    this.qrCodeDetailsForm.get('size')?.valueChanges.subscribe(() => {
+    this.generateQR();
+  });
+}
 }
