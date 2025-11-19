@@ -1,9 +1,9 @@
 import { Component, input } from '@angular/core';
-import { NgClass, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-custom-title',
-  imports: [NgStyle, NgClass],
+  imports: [NgStyle],
   templateUrl: './custom-title.html',
   styleUrl: './custom-title.css',
 })
