@@ -5,6 +5,7 @@ import { GeneratorPassword } from './sites/generator/password/generator-password
 import { GeneratorQrcode } from './sites/generator/qrcode/generator-qrcode';
 import { Comingsoon } from './sites/navbar/comingsoon/comingsoon';
 import { Changelog } from './sites/navbar/changelog/changelog';
+import { About } from './sites/navbar/about/about';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
   {
     path: 'changelog',
     component: Changelog,
+  },
+  {
+    path: 'about',
+    component: About,
   },
   // GENERATORS
   {
