@@ -1,4 +1,4 @@
-<div>
+<div class="rounded-lg shadow-md p-6 max-w-2xl mx-auto">
     <div class="mb-8">
         <app-custom-title
         text="Coming Soon"
@@ -6,6 +6,7 @@
         fontWeight="bold"
         ></app-custom-title>
     </div>
+
 
     <div class="bg-zinc-800 rounded-lg shadow-md p-6 max-w-2xl mx-auto">
         <div class="text-gray-300">
@@ -18,9 +19,28 @@
                 Instead, I add new tools and functions when I have a good idea and the time allows.
             </p>
         </div>
+
+        <div class="mt-4">
+            <app-custom-title 
+            text="Version 0.4.0"
+            [textSizeInPx]="24"
+            fontWeight="bold"
+            ></app-custom-title>
+            <div class="ml-4">
+                <h3>New Tool(s):</h3>
+                <ul class="list-disc pl-10 mt-2 space-y-2 text-gray-300">
+                    <li>Document Converter - changes format of documents</li>
+                    <li>Random Generator - generates random numbers or selects a randing string from a input</li>
+                <li>Date Converter - converts date formats</li>
+                <li>Text Case Converter - converts text to upper, lower or title case</li>
+            </ul>
+        </div>
+
+        <hr class="my-4 border-gray-400">
+
         <div class="bg-blue-900/20 rounded-lg p-6 border border-blue-800 mt-4">
             <h3 class="text-xl font-bold text-blue-400 mb-2">Want to suggest a feature?</h3>
-            <div class="ml-2">
+            <div class="ml-4">
                 <p>Feel free to give me feedback or suggestions for the project! I welcome any suggestions, feedback or features.</p>
                 <ul class="ml-2 mt-2">
                     <li>- <a href="https://wsdaniel.notion.site/1f5dcb62b3ee80c38fa0fa5e872e78a0?pvs=105" class="text-blue-500 hover:text-blue-600"> Notion Form</a></li>
