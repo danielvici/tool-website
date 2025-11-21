@@ -18,9 +18,9 @@
 
             <div [formGroup]="qrCodeDetailsForm" class="space-y-6">
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Text or URL</label>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Text or URL*</label>
                     <input type="text" placeholder="Enter text or URL" formControlName="text"
-                        class="w-full bg-zinc-700 text-white rounded-md border border-gray-600 p-2" />
+                        class="w-full bg-zinc-700 text-white rounded-md border border-gray-600 p-2 focus:outline-none" [ngClass]="{'border-red-500': !qrCodeDetailsForm.valid }"  />
                 </div>
 
                 <div>
@@ -43,10 +43,12 @@
                     </div>
                 </div>
 
-                <button type="button" (click)="generateQR()"
-                    class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors">
-                    Generate QR Code
-                </button>
+                <span title="You have to enter a URL to contiune">
+                    <button type="button" (click)="generateQR()"
+                        class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors disabled:bg-gray-500" [disabled]="!qrCodeDetailsForm.valid">
+                        Generate QR Code
+                    </button>
+                </span>
             </div>
 
             <div class="flex mt-6 flex-col items-center space-y-4">

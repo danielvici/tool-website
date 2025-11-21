@@ -3,12 +3,13 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import QRCode from 'qrcode';
 import { CustomTitle } from "../../../components/custom-title/custom-title";
 import { CustomDescription } from "../../../components/custom-description/custom-description";
+import { NgClass } from "../../../../../node_modules/@angular/common";
 
 @Component({
   selector: 'app-generator-qrcode',
   templateUrl: './generator-qrcode.html',
   styleUrls: ['./generator-qrcode.css'],
-  imports: [ReactiveFormsModule, CustomTitle, CustomDescription],
+  imports: [ReactiveFormsModule, CustomTitle, CustomDescription, NgClass],
 })
 export class GeneratorQrcode {
   qrDataUrl: string | null = null;
