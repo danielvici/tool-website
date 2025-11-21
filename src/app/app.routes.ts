@@ -3,6 +3,7 @@ import { Startpage } from './sites/startpage/startpage';
 import { TestIt } from './sites/test-it/test-it';
 import { GeneratorPassword } from './sites/generator/password/generator-password.component';
 import { GeneratorQrcode } from './sites/generator/qrcode/generator-qrcode';
+import { Comingsoon } from './sites/navbar/comingsoon/comingsoon';
 
 export const routes: Routes = [
   {
@@ -12,7 +13,13 @@ export const routes: Routes = [
   {
     path: '',
     component: Startpage,
-  }, // GENERATORS
+  },
+  // NAVBAR SITES
+  {
+    path: 'coming-soon',
+    component: Comingsoon,
+  }, 
+  // GENERATORS
   {
     path: 'generator/password',
     component: GeneratorPassword,
