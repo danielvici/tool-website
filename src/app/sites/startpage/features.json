@@ -18,18 +18,36 @@
         ]
     },
     {
-        "name": "Tests",
+        "name": "Converters",
         "enabled": true,
         "tools": [
             {
-                "name": "Test 1",
-                "description": "This is a just test description.",
+                "name": "Image format converter",
+                "description": "Convert images to different formats",
+                "link": "/converters/image-format",
+                "enabled": true
+            },
+            {
+                "name": "Template 2",
+                "description": "This is a just Template description.",
+                "link": "/test",
+                "enabled": false
+            }
+        ]
+    },
+    {
+        "name": "Template",
+        "enabled": false,
+        "tools": [
+            {
+                "name": "Template 1",
+                "description": "This is a just Template description.",
                 "link": "/test",
                 "enabled": true
             },
             {
-                "name": "Test 2",
-                "description": "This is a just test description.",
+                "name": "Template 2",
+                "description": "This is a just Template description.",
                 "link": "/test",
                 "enabled": false
             }

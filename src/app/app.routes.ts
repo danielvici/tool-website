@@ -5,6 +5,7 @@ import { GeneratorPassword } from './sites/generator/password/generator-password
 import { GeneratorQrcode } from './sites/generator/qrcode/generator-qrcode';
 import { Comingsoon } from './sites/navbar/comingsoon/comingsoon';
 import { About } from './sites/navbar/about/about';
+import { ImageFormatConverter } from './sites/converters/image-format-converter/image-format-converter';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,11 @@ export const routes: Routes = [
   {
     path: 'generators/qrcode',
     component: GeneratorQrcode,
+  },
+  // CONVERTERS
+  {
+    path: 'converters/image-format',
+    component: ImageFormatConverter,
   },
   {
     path: '**',
