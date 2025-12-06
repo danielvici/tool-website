@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
           throw new Error('Unsupported format')
       }
 
-      return new NextResponse(convertedBuffer, {
+      return new NextResponse(convertedBuffer.buffer as ArrayBuffer, {
         headers: {
           'Content-Type': `image/${format}`,
           'Content-Disposition': `attachment; filename="converted.${format}"`,
