@@ -31,11 +31,11 @@ export const routes: Routes = [
   },
   // GENERATORS
   {
-    path: 'generator/password',
+    path: 'generators/password',
     component: GeneratorPassword,
   },
   {
-    path: 'generator/qrcode',
+    path: 'generators/qrcode',
     component: GeneratorQrcode,
   },
   {
