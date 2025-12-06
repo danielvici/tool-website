@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Generators",
+        "enabled": true,
+        "tools": [
+            {
+                "name": "Password Generator",
+                "description": "Create secure passwords with custom options",
+                "link": "/generators/password",
+                "enabled": true
+            },
+            {
+                "name": "QR Code Generator",
+                "description": "Generate and download QR codes for any text or URL",
+                "link": "/generators/qrcode",
+                "enabled": true
+            }
+        ]
+    },
+    {
+        "name": "Tests",
+        "enabled": true,
+        "tools": [
+            {
+                "name": "Test 1",
+                "description": "This is a just test description.",
+                "link": "/test",
+                "enabled": true
+            },
+            {
+                "name": "Test 2",
+                "description": "This is a just test description.",
+                "link": "/test",
+                "enabled": false
+            }
+        ]
+    }
+]
